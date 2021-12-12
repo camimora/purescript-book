@@ -1,7 +1,9 @@
 module Data.AddressBook where
 
 import Prelude
+
 import Data.Generic.Rep (class Generic)
+import Data.Maybe (Maybe(..))
 import Data.Show.Generic (genericShow)
 
 type Address
@@ -78,3 +80,7 @@ examplePerson =
     , phoneNumber CellPhone "555-555-0000"
     ]
 -- ANCHOR_END: examplePerson
+
+-- instance myMaybeFunctor :: Functor Maybe where
+--   map a2b (Just a) = Just (a2b a)
+--   map _ Nothing = Nothing
